@@ -1,0 +1,35 @@
+" selected Intellimacs modules
+source ~/.intellimacs/spacemacs.vim
+source ~/.intellimacs/extra.vim
+source ~/.intellimacs/major.vim
+source ~/.intellimacs/hybrid.vim
+
+" emulated VIM plugins
+set surround
+set commentary
+
+" comma for major mode
+nmap , <leader>m
+vmap , <leader>m
+
+" Y should yank till the end of the line
+nnoremap Y y$
+
+" custom escape key sequence in insert mode
+:imap fd <Esc>
+:vmap fd <Esc>
+
+" open new lines from insert mode
+inoremap <A-o> <ESC>o
+inoremap <A-O> <ESC>O
+
+" jump to symbol/function/method
+nnoremap <leader>ji :action FileStructurePopup<CR>
+
+" custom keybindings to move lines/regions up and down
+nnoremap <C-S-j> :action MoveLineDown<CR>
+nnoremap <C-S-k> :action MoveLineUp<CR>
+vnoremap <C-S-j> :action MoveLineDown<CR>
+vnoremap <C-S-k> :action MoveLineUp<CR>
+inoremap <C-S-j> <Esc> :action MoveLineDown<CR>
+inoremap <C-S-k> <Esc> :action MoveLineUp<CR>
