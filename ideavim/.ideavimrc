@@ -21,7 +21,7 @@ nnoremap Y y$
 
 " open new lines from insert mode
 inoremap <A-o> <ESC>o
-inoremap <A-O> <ESC>O
+inoremap <A-S-o> <ESC>O
 
 " jump to symbol/function/method
 nnoremap <leader>ji :action FileStructurePopup<CR>
