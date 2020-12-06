@@ -7,3 +7,8 @@ A collection of my personal configuration dotfiles for various software such as:
 - [XCompose](https://wiki.debian.org/XCompose)
 
 > My [emacs](https://www.gnu.org/software/emacs/) configuration can be found in a separate repository [here](https://github.com/TheBlob42/.emacs.d)
+
+Also some other stuff:
+
+- utility shell scripts
+  - battery status check notification
