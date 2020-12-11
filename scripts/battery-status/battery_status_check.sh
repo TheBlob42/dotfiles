@@ -10,8 +10,8 @@
 # edit crontab with:   crontab -e
 # reload all crontabs: sudo service cron restart
 
-UPPER_THRESHOLD=80
-LOWER_THRESHOLD=30
+UPPER_THRESHOLD="80"
+LOWER_THRESHOLD="30"
 
 BATTERY_LEVEL=`acpi -b | grep -P -o '[0-9]+(?=%)'`
 IS_CHARGING=`acpi -b | grep -P -o 'Charging'`
@@ -19,14 +19,14 @@ IS_CHARGING=`acpi -b | grep -P -o 'Charging'`
 if [ -n "$IS_CHARGING" ]
 then
 
-    if [ $BATTERY_LEVEL -gt $UPPER_TRESHOLD ]
+    if [ "$BATTERY_LEVEL" -gt "$UPPER_TRESHOLD" ]
     then
 	XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send "Battery Management" "Battery level is at ${BATTERY_LEVEL}%\nStop charging to spare the battery" -i battery
     fi
 
 else
 
-    if [ $BATTERY_LEVEL -lt $LOWER_TRESHOLD ]
+    if [ "$BATTERY_LEVEL" -lt "$LOWER_THRESHOLD" ]
     then
 	XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send "Battery Management" "Battery level is at ${BATTERY_LEVEL}%\nYou should start charging now" -i battery-low
     fi
