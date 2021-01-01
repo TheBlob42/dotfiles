@@ -19,7 +19,7 @@ IS_CHARGING=`acpi -b | grep -P -o 'Charging'`
 if [ -n "$IS_CHARGING" ]
 then
 
-    if [ "$BATTERY_LEVEL" -gt "$UPPER_TRESHOLD" ]
+    if [ "$BATTERY_LEVEL" -gt "$UPPER_THRESHOLD" ]
     then
 	XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send "Battery Management" "Battery level is at ${BATTERY_LEVEL}%\nStop charging to spare the battery" -i battery
     fi
