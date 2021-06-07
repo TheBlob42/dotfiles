@@ -1,16 +1,17 @@
-" selected Intellimacs modules
+" selected intellimacs modules
 source ~/.intellimacs/spacemacs.vim
 source ~/.intellimacs/extra.vim
 source ~/.intellimacs/major.vim
 source ~/.intellimacs/hybrid.vim
+source ~/.intellimacs/which-key.vim
 
 " emulated VIM plugins
 set surround
 set commentary
+set NERDTree
+set sneak
 
-" comma for major mode
-nmap , <leader>m
-vmap , <leader>m
+set notimeout
 
 " Y should yank till the end of the line
 nnoremap Y y$
@@ -25,6 +26,13 @@ inoremap <A-S-o> <ESC>O
 
 " jump to symbol/function/method
 nnoremap <leader>ji :action FileStructurePopup<CR>
+let g:WhichKeyDesc_jump_to_member = "<leader>ji jump-to-member"
+
+" NerdTree keybindings
+nnoremap <leader>N :NERDTreeToggle<CR>
+nnoremap <leader>J :NERDTreeFind<CR>
+let g:WhichKeyDesc_nerd_tree      = "<leader>N NERDTree"
+let g:WhichKeyDesc_nerd_tree_find = "<leader>J NERDTree Find"
 
 " custom keybindings to move lines/regions up and down
 nnoremap <C-S-j> :action MoveLineDown<CR>
