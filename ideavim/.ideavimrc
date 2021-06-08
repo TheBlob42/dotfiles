@@ -41,3 +41,8 @@ vnoremap <C-S-j> :action MoveLineDown<CR>
 vnoremap <C-S-k> :action MoveLineUp<CR>
 inoremap <C-S-j> <Esc> :action MoveLineDown<CR>
 inoremap <C-S-k> <Esc> :action MoveLineUp<CR>
+
+" custom gradle commands
+nnoremap <leader>mGg :action Gradle.ExecuteTask<CR>
+let g:WhichKeyDesc_gradle    = "<leader>mG  +gradle"
+let g:WhichKeyDesc_gradle_ex = "<leader>mGg execute-gradle-task"
